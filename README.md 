@@ -16,3 +16,8 @@ cat > input.json <<'JSON'
 JSON
 ./gradlew run --args=--args=input.json
 
+
+Assumptions:
+
+1. Assumed all the robots will not collide and they will have unique paths and different destination that will
+not collide each other
