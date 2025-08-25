@@ -8,13 +8,13 @@ cat > input.json <<'JSON'
 {
     "gridSize": { "x": 5, "y": 5 },
     "robotInputs": [
-    { "robotState": { "state": { "x": 1, "y": 2 }, "direction": "N" }, "travelInstruction": "LMLMLMLMM" },
+    { "robotState": { "state": { "x": 1, "y": 2 }, "direction": "N" }, "travelInstruction": "LMLMLMLMx" },
     { "robotState": { "state": { "x": 3, "y": 3 }, "direction": "E" }, "travelInstruction": "MMRMMRMRRM" },
-    { "robotState": { "state": { "x": 6, "y": 6 }, "direction": "E" }, "travelInstruction": "MMRMMRMRRM" }
+    { "robotState": { "state": { "x": 5, "y": 5 }, "direction": "E" }, "travelInstruction": "MMRMMRMRRx" }
     ]
 }
 JSON
-./gradlew run --args=--args=input.json
+./gradlew run --args=input.json
 
 
 Assumptions:
