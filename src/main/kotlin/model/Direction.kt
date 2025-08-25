@@ -12,6 +12,15 @@ enum class Direction {
         }
     }
 
+    fun moveBackward(pos: RobotState) {
+        when (pos.direction) {
+            Direction.N -> pos.state.y -= 1
+            Direction.E -> pos.state.x -= 1
+            Direction.S -> pos.state.y += 1
+            Direction.W -> pos.state.x += 1
+        }
+    }
+
     fun turnLeft(): Direction = when (this) {
         N -> W
         W -> S

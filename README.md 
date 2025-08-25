@@ -5,17 +5,18 @@ This project simulates robot navigation on a 2D grid.
 ## How to Run
 ```bash
 cat > input.json <<'JSON'
-{
+[{
     "gridSize": { "x": 5, "y": 5 },
     "robotInputs": [
-    { "robotState": { "state": { "x": 1, "y": 2 }, "direction": "N" }, "travelInstruction": "LMLMLMLMx" },
-    { "robotState": { "state": { "x": 3, "y": 3 }, "direction": "E" }, "travelInstruction": "MMRMMRMRRM" },
-    { "robotState": { "state": { "x": 5, "y": 5 }, "direction": "E" }, "travelInstruction": "MMRMMRMRRx" }
+    { "robotState": { "state": { "x": 1, "y": 2 }, "direction": "N" }, "travelInstruction": "MMBBRMMLM", "initialFuel": 100 }
     ]
-}
+}]
 JSON
 ./gradlew run --args=input.json
 
+5 5
+0 0 N
+MMMMMMM
 
 Assumptions:
 
